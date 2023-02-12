@@ -27,7 +27,7 @@ This is a solution to the [FAQ Accordion Card](https://www.frontendmentor.io/cha
 
 ### Links
 
-- Solution URL: [GitHub Code](https://github.com/Dayne2x/Social-Proof-Section)
+- Solution URL: [GitHub Code](https://github.com/Dayne2x/FAQ-Accordion-Card-JS)
 - Live Site URL: [GitHub Pages Live URL](https://dayne2x.github.io/FAQ-Accordion-Card-JS/)
 
 ## My process
