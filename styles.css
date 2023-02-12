@@ -1,0 +1,233 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Kumbh Sans", "sans-serif";
+    min-height: 100vh;
+    background: linear-gradient(hsl(273, 75%, 66%) 13%, hsl(240, 73%, 65%));
+    display: grid;
+    place-items: center;
+  }
+  
+  .faq {
+    background-color: white;
+    width: 86.5%;
+    max-width: 360px;
+    border-radius: 24px;
+    position: relative;
+  }
+  
+ /* PAGE LAYOUT */
+  
+  .faq::before {
+    content: "";
+    background: url(images/illustration-woman-online-mobile.svg) no-repeat;
+    width: 268px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-55%, -55%);
+  }
+  
+  .faq::after {
+    content: "";
+    background: url(images/bg-pattern-mobile.svg) no-repeat;
+    width: 268px;
+    height: 180px;
+    position: absolute;
+    top: 6.5rem;
+    left: 50%;
+    transform: translate(-45%, -53%);
+  }
+  
+  /* ANIMATION */
+  
+  @keyframes boxHop {
+    from {
+      transform: translate(-55%, -55%);
+    }
+    50% {
+      transform: translate(-55%, -57.5%);
+    }
+    to {
+      transform: translate( -55% ,-55%);
+    }
+  }
+  
+  
+  /* QUESTIONS */
+  
+  .questions {
+    padding-inline: 1.5rem .5rem;
+    padding-block: 9rem 3rem;
+  }
+  
+  .questions-title {
+    text-align: center;
+    font-size: 1.92rem;
+    color: hsl(237, 12%, 33%);
+    padding-block-end: .75rem;
+  }
+  
+  .question {
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+  }
+  
+  .question-title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    transition: color .15s ease-in-out;
+  }
+  
+  .question-title:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+  }
+  
+  .question-title::after {
+    content: "";
+    display: block;
+    width: 95%;
+    background: hsl(240, 5%, 91%);
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .question-title-text {
+    font-size: .8rem;
+    line-height: 1.3;
+  }
+  
+  .question-button {
+    border: 0;
+    background: inherit;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  /* ANSWERS */
+  
+  .question-text {
+    display: none;
+    position: relative;
+    color: hsl(240, 6%, 50%);
+  }
+  
+  .question-text:before {
+    content: "";
+    display: block;
+    width: 112%;
+    background: hsl(240, 5%, 91%);
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* DROPDOWN TOGGLE */
+  
+  .show-text .question-text {
+    display: block;
+    font-size: .765rem;
+    line-height: 1.7;
+    width: 85%;
+    padding-block-end: 1rem;
+  }
+  
+  .show-text .question-button {
+    transform: rotate(180deg);
+  }
+  
+  .show-text .question-title {
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+  }
+  
+  .show-text .question-title::after {
+    display: none;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media screen and (min-width: 650px) {
+  
+    .faq {
+      max-width: 500px;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+  
+    .faq {
+      height: 510px;
+      max-width: 925px;
+      display: flex;
+      justify-content: flex-end;
+      background:
+      url(images/illustration-woman-online-desktop.svg) bottom 3.1rem left -5.1rem no-repeat,
+      url(images/bg-pattern-desktop.svg) bottom -10rem left -36rem no-repeat;
+      background-color: white; 
+    }
+  
+    .faq::before {
+      content: "";
+      background: url(images/illustration-box-desktop.svg) no-repeat;
+      width: 140px;
+      height: 190px;
+      position: absolute;
+      top: 66%;
+      left: -1.6%;
+      transform: translate(-55%, -55%);
+      animation: boxHop 2s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    
+    .faq::after {
+      display: none;
+    }
+  
+    .questions {
+      width: 50%;
+      padding-block-start: 4.5rem;
+      padding-inline-end: 5rem;
+    }
+  
+    .questions-title {
+      text-align: left;
+      padding-block-end: 1.5rem;
+      font-size: 2.2rem;
+    }
+  
+    .question {
+      font-weight: 400;
+    }
+  
+    .question-title p {
+      font-size: .9rem;
+    }
+  }
+
+  /* CREDIT */
+
+  .attribution {
+    color: hsl(240, 13%, 17%);
+    font-size: 1.4rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(305, 68%, 73%)
+}
